@@ -1,0 +1,14 @@
+DROP TABLE pet;
+DROP TABLE shop;
+
+CREATE TABLE shop (
+  id SERIAL4 PRIMARY KEY,
+  name VARCHAR(255)
+);
+
+CREATE TABLE pet (
+  id SERIAL4 PRIMARY KEY,
+  name VARCHAR(255),
+  type VARCHAR(255),
+  shop_id INT4 REFERENCES shop(id)
+);
